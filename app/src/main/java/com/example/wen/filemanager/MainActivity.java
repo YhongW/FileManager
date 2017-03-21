@@ -300,7 +300,6 @@ public class MainActivity extends AppCompatActivity {
         if(listViewItemStatus==0) {
             tStrings = new String[]{"添加", "搜索", "刷新", "取消", "粘贴"};
             icons = new int[]{R.mipmap.icon_add, R.mipmap.icon_serach, R.mipmap.icon_refresh, R.mipmap.icon_cancle, R.mipmap.icon_menu};
-
         }else if(listViewItemStatus==1){
             tStrings = new String[]{"复制", "移动", "删除", "全选", "重命名"};
             icons = new int[]{R.mipmap.icon_copy, R.mipmap.icon_move, R.mipmap.icon_trash, R.mipmap.icon_check_all, R.mipmap.icon_rename};
@@ -369,7 +368,6 @@ public class MainActivity extends AppCompatActivity {
        long availableBlocks = stat.getAvailableBlocksLong();
        final int index=(int)(100.0*(totalBlocks-availableBlocks)/totalBlocks);
        roundProgressBar.setMax(100);
-       //roundProgressBar.setProgress(index);
        new Thread(new Runnable() {
            @Override
            public void run() {
@@ -689,6 +687,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //动态获取存储权限
     private void getPermission(){
         String[] p=new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS};
         int i1=ContextCompat.checkSelfPermission(MainActivity.this,p[0] );
