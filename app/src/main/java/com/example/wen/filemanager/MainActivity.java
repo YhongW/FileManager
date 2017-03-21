@@ -130,24 +130,9 @@ public class MainActivity extends AppCompatActivity {
     };
 
     void initGridViewPager(){
-        //初始化gridView
-//        List<HashMap<String, Object>> dataList = new ArrayList<HashMap<String, Object>>();
-//        String[] tStrings = new String[]{"图片", "音乐", "视频", "Word","文档", "压缩包"};
-//        String[] counts = new String[]{"(..)", "(..)", "(..)", "(..)","(..)", "(..)"};
-//        int[] icons = new int[]{R.mipmap.icon_pictures, R.mipmap.icon_music, R.mipmap.icon_movie,R.mipmap.icon_word, R.mipmap.icon_document, R.mipmap.icon_zip_folder};
-//        for (int i = 0; i < tStrings.length; i++) {
-//            HashMap<String, Object> map = new HashMap<String, Object>();
-//            map.put("image", icons[i]);
-//            map.put("text", tStrings[i]);
-//            map.put("count", counts[i]);
-//            dataList.add(map);
-//        }
-//        gridView_adapter = new SimpleAdapter(this, dataList, R.layout.item_gridview, new String[]{"image", "text", "count"}, new int[]{R.id.image, R.id.text, R.id.count});
         tab_gridView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.tab_catagory, null);
         gridView=(GridView)tab_gridView.findViewById(R.id.tab_catagory_gridview);
-        //gridView.setAdapter(gridView_adapter);
         roundProgressBar=(RoundProgressBar)tab_gridView.findViewById(R.id.roundProgressBar);
-        //setStorageProcess();
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
