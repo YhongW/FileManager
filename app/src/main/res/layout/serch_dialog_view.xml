@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="3dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/background_dark"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:checkedButton="@+id/current_folder">
+        <RadioButton
+            android:id="@+id/current_folder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="当前文件夹"/>
+        <RadioButton
+            android:id="@+id/all_folder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="所有文件夹"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

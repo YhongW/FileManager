@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_navigation"
+        android:layout_width="match_parent"
+        android:background="@drawable/divider"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
+        app:tabMaxWidth="200dp"
+        app:tabIndicatorHeight="0dp"
+        android:layout_height="0dp"
+        app:tabTextAppearance="@style/TextAppearance.StatusBar.EventContent.Title">
+    </android.support.design.widget.TabLayout>
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_below="@+id/tab_navigation"
+        android:paddingBottom="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    <GridView
+        android:id="@+id/bottomGridView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:numColumns="5"
+        android:background="#f3f0e5"
+        android:layout_gravity="center"
+        android:stretchMode="columnWidth">
+    </GridView>
+
+</RelativeLayout>
